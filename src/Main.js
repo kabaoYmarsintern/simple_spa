@@ -12,20 +12,22 @@ class Main extends Component {
           <h1>Simple SPA</h1>
           <ul className="header">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink exact to="/">
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/stuff">Stuff</NavLink>
+              <NavLink to="/Stuff">Stuff</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/Contact">Contact</NavLink>
             </li>
           </ul>
           <div className="content">
             <Routes>
-              <Route path="/" component={Home} />
-              <Route path="/stuff" component={Stuff} />
-              <Route path="/contact" component={Contact} />
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/stuff" element={<Stuff />} />
+              <Route exact path="/contact" element={<Contact />} />
             </Routes>
           </div>
         </div>
